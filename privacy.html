@@ -51,7 +51,7 @@
     система Android; по их правилам и настройкам геолокации телефона. Приложение не отслеживает перемещения в фоне. На устройстве сохраняются места,
     которые вы указали у пунктов, а построенные маршруты вместе с точкой начала (вашим местоположением в момент
     построения) хранятся до 60 дней, чтобы показывать их без интернета.</li>
-  <li><b>Голосовой ввод</b> выполняет системный сервис распознавания речи вашего устройства (например, от Google или Яндекса)
+  <li><b>Голосовой ввод</b> выполняет системный сервис распознавания речи вашего устройства (от Google, Яндекса или другого поставщика)
     по его правилам. Приложение получает только распознанный текст и не записывает звук.</li>
   <li><b>Буфер обмена</b> читается только когда вы сами нажимаете кнопку вставки.</li>
   <li><b>Уведомления и напоминания</b> планируются и показываются на устройстве; никуда не передаются.</li>
@@ -68,13 +68,24 @@
     местоположение, когда выбор места открывается с него.</li>
   <li><b>Маршруты</b> — FOSSGIS e.V. (<code>routing.openstreetmap.de</code>): получает координаты начала и конца маршрута.</li>
 </ul>
-<p>Эти организации обрабатывают запросы по своим правилам, например
-<a href="https://osmfoundation.org/wiki/Privacy_Policy">политика конфиденциальности OpenStreetMap Foundation</a>.
-Запросы отправляются, только когда вы работаете с местами: открываете карту или пункт с местом, ищете адрес, строите маршрут.</p>
+<p>Запросы отправляются, только когда вы работаете с местами: открываете карту или пункт с местом, ищете адрес, строите маршрут.</p>
+
+<h2>Политики сторонних сервисов</h2>
+<p>Сторонние сервисы обрабатывают данные по своим правилам:</p>
+<ul>
+  <li>OpenStreetMap Foundation — тайлы карты и поиск адресов:
+    <a href="https://osmfoundation.org/wiki/Privacy_Policy">политика конфиденциальности</a>.</li>
+  <li>FOSSGIS e.V. — построение маршрутов:
+    <a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung/">политика конфиденциальности</a> (на немецком).</li>
+  <li>Google — определение местоположения сервисами Google Play, распознавание речи и резервное копирование, если
+    на устройстве они от Google: <a href="https://policies.google.com/privacy?hl=ru">политика конфиденциальности</a>.</li>
+  <li>Яндекс — распознавание речи, если на устройстве оно от Яндекса:
+    <a href="https://yandex.ru/legal/confidential/">политика конфиденциальности</a>.</li>
+</ul>
 
 <h2>Резервное копирование</h2>
 <p>Если на устройстве включено системное резервное копирование Android, система может сохранить данные приложения
-в резервную копию вашего аккаунта (например, Google) и восстановить их на новом устройстве. Это управляется настройками
+в резервную копию вашего аккаунта Google и восстановить их на новом устройстве. Это управляется настройками
 устройства, а не приложением.</p>
 
 <h2>Срок хранения и удаление</h2>
@@ -124,7 +135,7 @@ and where it is stored. Developer and data controller: Evgeny Gavrilov,
     Google Play services on the device (Fused Location Provider), or by the Android system where they are absent,
     under their own terms and your phone's location settings. The app does not track you in the background. The device keeps the places you set on items, and built
     routes together with their start point (your position at that moment) for up to 60 days so they work offline.</li>
-  <li><b>Voice input</b> is handled by your device's speech recognition service (for example Google or Yandex) under its
+  <li><b>Voice input</b> is handled by your device's speech recognition service (from Google, Yandex or another provider) under its
     own terms. The app receives only the recognized text and does not record audio.</li>
   <li><b>Clipboard</b> is read only when you tap the paste button.</li>
   <li><b>Notifications and reminders</b> are scheduled and shown on the device and are not sent anywhere.</li>
@@ -139,12 +150,23 @@ they see your device's IP address:</p>
     text or the coordinates of a point to look up, including your current position when the place picker starts there.</li>
   <li><b>Routes</b> — FOSSGIS e.V. (<code>routing.openstreetmap.de</code>): the start and end coordinates of a route.</li>
 </ul>
-<p>These organizations process requests under their own policies, e.g. the
-<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation Privacy Policy</a>.
-Requests are made only when you work with places: open a map or an item with a place, search for an address or build a route.</p>
+<p>Requests are made only when you work with places: open a map or an item with a place, search for an address or build a route.</p>
+
+<h2>Third-party privacy policies</h2>
+<p>Third-party services process data under their own policies:</p>
+<ul>
+  <li>OpenStreetMap Foundation — map tiles and address search:
+    <a href="https://osmfoundation.org/wiki/Privacy_Policy">Privacy Policy</a>.</li>
+  <li>FOSSGIS e.V. — routing:
+    <a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung/">Privacy Policy</a> (in German).</li>
+  <li>Google — location by Google Play services, speech recognition and backup when provided by Google on your device:
+    <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a>.</li>
+  <li>Yandex — speech recognition when provided by Yandex on your device:
+    <a href="https://yandex.com/legal/confidential/">Privacy Policy</a>.</li>
+</ul>
 
 <h2>Backup</h2>
-<p>If Android system backup is turned on, the system may include the app's data in your account backup (e.g. Google)
+<p>If Android system backup is turned on, the system may include the app's data in your Google account backup
 and restore it on a new device. This is controlled by your device settings, not by the app.</p>
 
 <h2>Retention and deletion</h2>
