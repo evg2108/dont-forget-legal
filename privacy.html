@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Не забудь — политика конфиденциальности</title>
+<style>
+  :root { --bg: #fdfcf9; --fg: #1f1f1f; --muted: #5f5f5f; --accent: #2e6b4f; --rule: #e3e0d8; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #161816; --fg: #e8e8e4; --muted: #a8aba4; --accent: #8fd1ae; --rule: #2d302c; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.7em; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 1.15em; margin: 32px 0 8px; }
+  p, li { margin: 0 0 10px; }
+  ul { padding-left: 22px; }
+  a { color: var(--accent); }
+  .date { color: var(--muted); margin-bottom: 24px; }
+  .lang { margin-bottom: 24px; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 56px 0; }
+</style>
+</head>
+<body>
+<main>
+
+<p class="lang"><a href="#en">English version below</a></p>
+
+<h1>Политика конфиденциальности приложения «Не забудь»</h1>
+<p class="date">Редакция от 12 октября 2026 года</p>
+
+<p>Политика описывает, какие данные обрабатывает Android-приложение «Не забудь» (пакет <code>com.dontforget.app</code>),
+зачем и где они хранятся. Разработчик и ответственное за обработку данных лицо — Евгений Гаврилов,
+<a href="mailto:dont-forget-app@yandex.com">dont-forget-app@yandex.com</a>.</p>
+
+<h2>Коротко</h2>
+<ul>
+  <li>Приложение работает без аккаунта и регистрации.</li>
+  <li>Списки, пункты, заметки, фото и места хранятся на вашем устройстве (и в его системной резервной копии, если она включена). Разработчик их не получает.</li>
+  <li>В приложении нет рекламы, аналитики и сторонних систем отслеживания.</li>
+  <li>Само приложение обращается в интернет только для показа карты, поиска адресов и построения маршрутов — к сервисам OpenStreetMap (подробнее ниже).</li>
+</ul>
+
+<h2>Какие данные обрабатываются и зачем</h2>
+<ul>
+  <li><b>Содержимое списков</b> — названия пунктов, количество, категории, заметки, теги, сроки, история ввода для подсказок,
+    настройки. Нужно для работы приложения. Хранится в базе данных приложения на устройстве.</li>
+  <li><b>Фотографии</b>, которые вы сами прикрепляете к пунктам из галереи. Копия фото (крупные снимки — уменьшенными) сохраняется
+    во внутреннем хранилище приложения на устройстве. Доступа ко всей галерее у приложения нет — только к выбранным снимкам.</li>
+  <li><b>Местоположение</b> (точное или приблизительное — на ваш выбор при запросе разрешения). Используется, только когда
+    вы открываете карту: чтобы показать, где вы находитесь, выбрать место для пункта и построить маршрут от вас.
+    Местоположение определяют сервисы Google Play на устройстве (Fused Location Provider), а если их нет —
+    система Android; по их правилам и настройкам геолокации телефона. Приложение не отслеживает перемещения в фоне. На устройстве сохраняются места,
+    которые вы указали у пунктов, а построенные маршруты вместе с точкой начала (вашим местоположением в момент
+    построения) хранятся до 60 дней, чтобы показывать их без интернета.</li>
+  <li><b>Голосовой ввод</b> выполняет системный сервис распознавания речи вашего устройства (например, от Google или Яндекса)
+    по его правилам. Приложение получает только распознанный текст и не записывает звук.</li>
+  <li><b>Буфер обмена</b> читается только когда вы сами нажимаете кнопку вставки.</li>
+  <li><b>Уведомления и напоминания</b> планируются и показываются на устройстве; никуда не передаются.</li>
+</ul>
+
+<h2>Какие данные передаются третьим лицам</h2>
+<p>Разработчику никакие данные не передаются. При работе с картой приложение обращается к открытым сервисам
+на основе OpenStreetMap. Как и любой интернет-запрос, обращение раскрывает сервису IP-адрес устройства:</p>
+<ul>
+  <li><b>Тайлы карты</b> — серверы OpenStreetMap Foundation (<code>tile.openstreetmap.org</code>): получают область карты,
+    которую вы просматриваете.</li>
+  <li><b>Поиск адресов</b> — Nominatim, OpenStreetMap Foundation (<code>nominatim.openstreetmap.org</code>): получает текст
+    поискового запроса или координаты точки, для которой нужно найти адрес, — в том числе ваше текущее
+    местоположение, когда выбор места открывается с него.</li>
+  <li><b>Маршруты</b> — FOSSGIS e.V. (<code>routing.openstreetmap.de</code>): получает координаты начала и конца маршрута.</li>
+</ul>
+<p>Эти организации обрабатывают запросы по своим правилам, например
+<a href="https://osmfoundation.org/wiki/Privacy_Policy">политика конфиденциальности OpenStreetMap Foundation</a>.
+Запросы отправляются, только когда вы работаете с местами: открываете карту или пункт с местом, ищете адрес, строите маршрут.</p>
+
+<h2>Резервное копирование</h2>
+<p>Если на устройстве включено системное резервное копирование Android, система может сохранить данные приложения
+в резервную копию вашего аккаунта (например, Google) и восстановить их на новом устройстве. Это управляется настройками
+устройства, а не приложением.</p>
+
+<h2>Срок хранения и удаление</h2>
+<p>Данные хранятся на устройстве, пока вы их не удалите. Пункты и списки, удалённые в приложении, исчезают из
+интерфейса, но приложение ведёт журнал изменений, и их прежнее содержимое остаётся в нём.
+Полностью все данные удаляются через «Настройки Android → Приложения → Не забудь → Хранилище → Очистить данные» или
+вместе с приложением. Кэш маршрутов очищается автоматически через 60 дней.
+Отозвать доступ к местоположению или уведомлениям можно в настройках Android в любой момент — остальные функции продолжат работать.</p>
+
+<h2>Дети</h2>
+<p>Приложение не собирает данные о возрасте и не предназначено специально для детей.</p>
+
+<h2>Изменения политики</h2>
+<p>Если приложение начнёт обрабатывать данные иначе (например, появится синхронизация между устройствами), политика будет
+обновлена до выхода такой версии, а дата редакции вверху изменится.</p>
+
+<h2>Контакты</h2>
+<p>Вопросы о данных и запросы об их обработке — на <a href="mailto:dont-forget-app@yandex.com">dont-forget-app@yandex.com</a>.</p>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>Don't Forget — Privacy Policy</h1>
+<p class="date">Effective October 12, 2026</p>
+
+<p>This policy explains what data the Android app “Don't Forget” (package <code>com.dontforget.app</code>) handles, why,
+and where it is stored. Developer and data controller: Evgeny Gavrilov,
+<a href="mailto:dont-forget-app@yandex.com">dont-forget-app@yandex.com</a>.</p>
+
+<h2>Summary</h2>
+<ul>
+  <li>No account or sign-up is required.</li>
+  <li>Your lists, items, notes, photos and places are stored on your device (and in its system backup, if enabled). The developer never receives them.</li>
+  <li>The app contains no ads, analytics or third-party tracking.</li>
+  <li>The app itself goes online only for the map, address search and routes, using OpenStreetMap services (see below).</li>
+</ul>
+
+<h2>Data the app handles</h2>
+<ul>
+  <li><b>List content</b> — item names, quantities, categories, notes, tags, due dates, input history for suggestions and
+    settings. Stored in the app's database on your device.</li>
+  <li><b>Photos</b> you attach to items from your gallery. A copy (large images are downscaled) is stored in the
+    app's private storage on your device. The app
+    has no access to your whole gallery, only to the photos you pick.</li>
+  <li><b>Location</b> (precise or approximate, as you choose when granting permission). Used only while you are on a map
+    screen: to show where you are, pick a place for an item and build a route from your position. Location is provided by
+    Google Play services on the device (Fused Location Provider), or by the Android system where they are absent,
+    under their own terms and your phone's location settings. The app does not track you in the background. The device keeps the places you set on items, and built
+    routes together with their start point (your position at that moment) for up to 60 days so they work offline.</li>
+  <li><b>Voice input</b> is handled by your device's speech recognition service (for example Google or Yandex) under its
+    own terms. The app receives only the recognized text and does not record audio.</li>
+  <li><b>Clipboard</b> is read only when you tap the paste button.</li>
+  <li><b>Notifications and reminders</b> are scheduled and shown on the device and are not sent anywhere.</li>
+</ul>
+
+<h2>Data shared with third parties</h2>
+<p>Nothing is sent to the developer. Map features use open OpenStreetMap-based services. Like any internet request,
+they see your device's IP address:</p>
+<ul>
+  <li><b>Map tiles</b> — OpenStreetMap Foundation (<code>tile.openstreetmap.org</code>): the map area you are viewing.</li>
+  <li><b>Address search</b> — Nominatim, OpenStreetMap Foundation (<code>nominatim.openstreetmap.org</code>): your search
+    text or the coordinates of a point to look up, including your current position when the place picker starts there.</li>
+  <li><b>Routes</b> — FOSSGIS e.V. (<code>routing.openstreetmap.de</code>): the start and end coordinates of a route.</li>
+</ul>
+<p>These organizations process requests under their own policies, e.g. the
+<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation Privacy Policy</a>.
+Requests are made only when you work with places: open a map or an item with a place, search for an address or build a route.</p>
+
+<h2>Backup</h2>
+<p>If Android system backup is turned on, the system may include the app's data in your account backup (e.g. Google)
+and restore it on a new device. This is controlled by your device settings, not by the app.</p>
+
+<h2>Retention and deletion</h2>
+<p>Data stays on your device until you delete it. Items and lists deleted in the app disappear from the interface,
+but the app keeps a change log that still contains their earlier content. All data is removed completely
+via Android Settings → Apps → Don't Forget → Storage → Clear data, or by uninstalling the app. The route cache is cleared
+automatically after 60 days. You can revoke location or
+notification access in Android settings at any time; the rest of the app keeps working.</p>
+
+<h2>Children</h2>
+<p>The app does not collect age information and is not specifically directed at children.</p>
+
+<h2>Changes</h2>
+<p>If the app starts handling data differently (for example, sync between devices), this policy will be updated before
+that version is released, and the date above will change.</p>
+
+<h2>Contact</h2>
+<p>Questions and data requests: <a href="mailto:dont-forget-app@yandex.com">dont-forget-app@yandex.com</a>.</p>
+</section>
+
+</main>
+</body>
+</html>
