@@ -25,7 +25,7 @@
 <p class="lang"><a href="#en">English version below</a></p>
 
 <h1>Политика конфиденциальности приложения «Не забудь»</h1>
-<p class="date">Редакция от 12 октября 2026 года</p>
+<p class="date">Редакция от 20 октября 2026 года</p>
 
 <p>Политика описывает, какие данные обрабатывает Android-приложение «Не забудь» (пакет <code>com.dontforget.app</code>),
 зачем и где они хранятся. Разработчик и ответственное за обработку данных лицо — Евгений Гаврилов,
@@ -36,7 +36,7 @@
   <li>Приложение работает без аккаунта и регистрации.</li>
   <li>Списки, пункты, заметки, фото и места хранятся на вашем устройстве (и в его системной резервной копии, если она включена). Разработчик их не получает.</li>
   <li>В приложении нет рекламы, аналитики и сторонних систем отслеживания.</li>
-  <li>Само приложение обращается в интернет только для показа карты, поиска адресов и построения маршрутов — к сервисам OpenStreetMap (подробнее ниже).</li>
+  <li>Само приложение обращается в интернет только для показа карты, поиска адресов и организаций рядом и построения маршрутов — к сервисам на основе OpenStreetMap (подробнее ниже).</li>
 </ul>
 
 <h2>Какие данные обрабатываются и зачем</h2>
@@ -50,7 +50,8 @@
     Местоположение определяют сервисы Google Play на устройстве (Fused Location Provider), а если их нет —
     система Android; по их правилам и настройкам геолокации телефона. Приложение не отслеживает перемещения в фоне. На устройстве сохраняются места,
     которые вы указали у пунктов, а построенные маршруты вместе с точкой начала (вашим местоположением в момент
-    построения) хранятся до 60 дней, чтобы показывать их без интернета.</li>
+    построения) хранятся до 60 дней, чтобы показывать их без интернета. Найденные рядом с адресом организации
+    хранятся на устройстве до 30 дней, чтобы подсказывать их без повторного запроса.</li>
   <li><b>Голосовой ввод</b> выполняет системный сервис распознавания речи вашего устройства (от Google, Яндекса или другого поставщика)
     по его правилам. Приложение получает только распознанный текст и не записывает звук.</li>
   <li><b>Буфер обмена</b> читается только когда вы сами нажимаете кнопку вставки.</li>
@@ -67,8 +68,11 @@
     поискового запроса или координаты точки, для которой нужно найти адрес, — в том числе ваше текущее
     местоположение, когда выбор места открывается с него.</li>
   <li><b>Маршруты</b> — FOSSGIS e.V. (<code>routing.openstreetmap.de</code>): получает координаты начала и конца маршрута.</li>
+  <li><b>Организации рядом</b> — серверы Overpass API: ООО «ВК» (<code>maps.mail.ru</code>) и одновременно
+    объединение Private.coffee, Австрия (<code>overpass.private.coffee</code>): получают координаты точки, выбранной
+    на карте, чтобы подсказать магазины и другие организации рядом с ней.</li>
 </ul>
-<p>Запросы отправляются, только когда вы работаете с местами: открываете карту или пункт с местом, ищете адрес, строите маршрут.</p>
+<p>Запросы отправляются, только когда вы работаете с местами: открываете карту или пункт с местом, выбираете точку, ищете адрес, строите маршрут.</p>
 
 <h2>Политики сторонних сервисов</h2>
 <p>Сторонние сервисы обрабатывают данные по своим правилам:</p>
@@ -79,6 +83,10 @@
     <a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung/">политика конфиденциальности</a> (на немецком).</li>
   <li>Google — определение местоположения сервисами Google Play, распознавание речи и резервное копирование, если
     на устройстве они от Google: <a href="https://policies.google.com/privacy?hl=ru">политика конфиденциальности</a>.</li>
+  <li>ООО «ВК» — поиск организаций рядом:
+    <a href="https://help.mail.ru/legal/terms/common/privacy">политика конфиденциальности</a>.</li>
+  <li>Private.coffee — поиск организаций рядом:
+    <a href="https://private.coffee/privacy.html">политика конфиденциальности</a> (на английском).</li>
   <li>Яндекс — распознавание речи, если на устройстве оно от Яндекса:
     <a href="https://yandex.ru/legal/confidential/">политика конфиденциальности</a>.</li>
 </ul>
@@ -109,7 +117,7 @@
 
 <section id="en" lang="en">
 <h1>Don't Forget — Privacy Policy</h1>
-<p class="date">Effective October 12, 2026</p>
+<p class="date">Effective October 20, 2026</p>
 
 <p>This policy explains what data the Android app “Don't Forget” (package <code>com.dontforget.app</code>) handles, why,
 and where it is stored. Developer and data controller: Evgeny Gavrilov,
@@ -120,7 +128,7 @@ and where it is stored. Developer and data controller: Evgeny Gavrilov,
   <li>No account or sign-up is required.</li>
   <li>Your lists, items, notes, photos and places are stored on your device (and in its system backup, if enabled). The developer never receives them.</li>
   <li>The app contains no ads, analytics or third-party tracking.</li>
-  <li>The app itself goes online only for the map, address search and routes, using OpenStreetMap services (see below).</li>
+  <li>The app itself goes online only for the map, address and nearby place search and routes, using OpenStreetMap-based services (see below).</li>
 </ul>
 
 <h2>Data the app handles</h2>
@@ -134,7 +142,8 @@ and where it is stored. Developer and data controller: Evgeny Gavrilov,
     screen: to show where you are, pick a place for an item and build a route from your position. Location is provided by
     Google Play services on the device (Fused Location Provider), or by the Android system where they are absent,
     under their own terms and your phone's location settings. The app does not track you in the background. The device keeps the places you set on items, and built
-    routes together with their start point (your position at that moment) for up to 60 days so they work offline.</li>
+    routes together with their start point (your position at that moment) for up to 60 days so they work offline. Places found near an address are kept on the device for up to 30 days
+    so they can be suggested without a new request.</li>
   <li><b>Voice input</b> is handled by your device's speech recognition service (from Google, Yandex or another provider) under its
     own terms. The app receives only the recognized text and does not record audio.</li>
   <li><b>Clipboard</b> is read only when you tap the paste button.</li>
@@ -149,8 +158,11 @@ they see your device's IP address:</p>
   <li><b>Address search</b> — Nominatim, OpenStreetMap Foundation (<code>nominatim.openstreetmap.org</code>): your search
     text or the coordinates of a point to look up, including your current position when the place picker starts there.</li>
   <li><b>Routes</b> — FOSSGIS e.V. (<code>routing.openstreetmap.de</code>): the start and end coordinates of a route.</li>
+  <li><b>Nearby places</b> — Overpass API servers of VK LLC (<code>maps.mail.ru</code>) and, in parallel, the
+    Private.coffee association, Austria (<code>overpass.private.coffee</code>): the coordinates of the point you pick
+    on the map, to suggest shops and other places near it.</li>
 </ul>
-<p>Requests are made only when you work with places: open a map or an item with a place, search for an address or build a route.</p>
+<p>Requests are made only when you work with places: open a map or an item with a place, pick a point, search for an address or build a route.</p>
 
 <h2>Third-party privacy policies</h2>
 <p>Third-party services process data under their own policies:</p>
@@ -161,6 +173,10 @@ they see your device's IP address:</p>
     <a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung/">Privacy Policy</a> (in German).</li>
   <li>Google — location by Google Play services, speech recognition and backup when provided by Google on your device:
     <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a>.</li>
+  <li>VK LLC — nearby place search:
+    <a href="https://help.mail.ru/legal/terms/common/privacy">Privacy Policy</a> (in Russian).</li>
+  <li>Private.coffee — nearby place search:
+    <a href="https://private.coffee/privacy.html">Privacy Policy</a>.</li>
   <li>Yandex — speech recognition when provided by Yandex on your device:
     <a href="https://yandex.com/legal/confidential/">Privacy Policy</a>.</li>
 </ul>
