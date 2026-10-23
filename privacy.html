@@ -25,7 +25,7 @@
 <p class="lang"><a href="#en">English version below</a></p>
 
 <h1>Политика конфиденциальности приложения «Не забудь»</h1>
-<p class="date">Редакция от 20 октября 2026 года</p>
+<p class="date">Редакция от 23 октября 2026 года</p>
 
 <p>Политика описывает, какие данные обрабатывает Android-приложение «Не забудь» (пакет <code>com.dontforget.app</code>),
 зачем и где они хранятся. Разработчик и ответственное за обработку данных лицо — Евгений Гаврилов,
@@ -64,13 +64,17 @@
 <ul>
   <li><b>Тайлы карты</b> — серверы OpenStreetMap Foundation (<code>tile.openstreetmap.org</code>): получают область карты,
     которую вы просматриваете.</li>
-  <li><b>Поиск адресов</b> — Nominatim, OpenStreetMap Foundation (<code>nominatim.openstreetmap.org</code>): получает текст
-    поискового запроса или координаты точки, для которой нужно найти адрес, — в том числе ваше текущее
-    местоположение, когда выбор места открывается с него.</li>
+  <li><b>Подсказки адреса</b> — Photon, komoot GmbH, Германия (<code>photon.komoot.io</code>): получает текст, который вы
+    вводите в поле адреса, и центр видимой карты, чтобы подсказывать адреса рядом; если Nominatim не ответил, — ещё и
+    координаты точки, для которой нужно найти адрес.</li>
+  <li><b>Поиск адресов</b> — Nominatim, OpenStreetMap Foundation (<code>nominatim.openstreetmap.org</code>): получает
+    координаты точки, для которой нужно найти адрес, — в том числе ваше текущее местоположение, когда выбор места
+    открывается с него, — а если Photon не ответил, — ещё и текст поиска с центром карты.</li>
   <li><b>Маршруты</b> — FOSSGIS e.V. (<code>routing.openstreetmap.de</code>): получает координаты начала и конца маршрута.</li>
   <li><b>Организации рядом</b> — серверы Overpass API, одновременно: ООО «НекстГИС» (<code>overpass.nextgis.com</code>),
     ООО «ВК» (<code>maps.mail.ru</code>) и объединение Private.coffee, Австрия (<code>overpass.private.coffee</code>):
-    получают координаты точки, выбранной на карте, чтобы подсказать магазины и другие организации рядом с ней.</li>
+    получают координаты точки, выбранной на карте, чтобы подсказать магазины и другие организации рядом с ней, а
+    после выбора улицы в подсказках адреса — её идентификатор в OpenStreetMap, чтобы показать номера её домов.</li>
 </ul>
 <p>Запросы отправляются, только когда вы работаете с местами: открываете карту или пункт с местом, выбираете точку, ищете адрес, строите маршрут.</p>
 
@@ -81,6 +85,8 @@
     <a href="https://osmfoundation.org/wiki/Privacy_Policy">политика конфиденциальности</a>.</li>
   <li>FOSSGIS e.V. — построение маршрутов:
     <a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung/">политика конфиденциальности</a> (на немецком).</li>
+  <li>komoot GmbH — подсказки адреса (Photon):
+    <a href="https://www.komoot.com/privacy">политика конфиденциальности</a> (на английском).</li>
   <li>Google — определение местоположения сервисами Google Play, распознавание речи и резервное копирование, если
     на устройстве они от Google: <a href="https://policies.google.com/privacy?hl=ru">политика конфиденциальности</a>.</li>
   <li>ООО «НекстГИС» — поиск организаций рядом:
@@ -119,7 +125,7 @@
 
 <section id="en" lang="en">
 <h1>Don't Forget — Privacy Policy</h1>
-<p class="date">Effective October 20, 2026</p>
+<p class="date">Effective October 23, 2026</p>
 
 <p>This policy explains what data the Android app “Don't Forget” (package <code>com.dontforget.app</code>) handles, why,
 and where it is stored. Developer and data controller: Evgeny Gavrilov,
@@ -157,12 +163,17 @@ and where it is stored. Developer and data controller: Evgeny Gavrilov,
 they see your device's IP address:</p>
 <ul>
   <li><b>Map tiles</b> — OpenStreetMap Foundation (<code>tile.openstreetmap.org</code>): the map area you are viewing.</li>
-  <li><b>Address search</b> — Nominatim, OpenStreetMap Foundation (<code>nominatim.openstreetmap.org</code>): your search
-    text or the coordinates of a point to look up, including your current position when the place picker starts there.</li>
+  <li><b>Address suggestions</b> — Photon, komoot GmbH, Germany (<code>photon.komoot.io</code>): the text you type into the
+    address field and the centre of the visible map, to suggest addresses nearby; if Nominatim does not answer, also the
+    coordinates of a point to look up.</li>
+  <li><b>Address search</b> — Nominatim, OpenStreetMap Foundation (<code>nominatim.openstreetmap.org</code>): the
+    coordinates of a point to look up, including your current position when the place picker starts there, and, if
+    Photon does not answer, your search text with the map centre.</li>
   <li><b>Routes</b> — FOSSGIS e.V. (<code>routing.openstreetmap.de</code>): the start and end coordinates of a route.</li>
   <li><b>Nearby places</b> — Overpass API servers, in parallel: NextGIS LLC (<code>overpass.nextgis.com</code>), VK LLC
     (<code>maps.mail.ru</code>) and the Private.coffee association, Austria (<code>overpass.private.coffee</code>): the
-    coordinates of the point you pick on the map, to suggest shops and other places near it.</li>
+    coordinates of the point you pick on the map, to suggest shops and other places near it, and, after you pick a street
+    in the address suggestions, its OpenStreetMap ID, to list its house numbers.</li>
 </ul>
 <p>Requests are made only when you work with places: open a map or an item with a place, pick a point, search for an address or build a route.</p>
 
@@ -173,6 +184,8 @@ they see your device's IP address:</p>
     <a href="https://osmfoundation.org/wiki/Privacy_Policy">Privacy Policy</a>.</li>
   <li>FOSSGIS e.V. — routing:
     <a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung/">Privacy Policy</a> (in German).</li>
+  <li>komoot GmbH — address suggestions (Photon):
+    <a href="https://www.komoot.com/privacy">Privacy Policy</a>.</li>
   <li>Google — location by Google Play services, speech recognition and backup when provided by Google on your device:
     <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a>.</li>
   <li>NextGIS LLC — nearby place search:
